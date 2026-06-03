@@ -20,7 +20,7 @@ rentang_tanggal = st.sidebar.date_input(
     key="kalender_traveloka"
 )
 
-st.sidebar.header("🏢 Pilih Kamar Freezer yang Aktif")
+st.sidebar.header("🏢 Pilih Ruang yang Aktif")
 abf_on = st.sidebar.checkbox("Air Blast Freezer (ABF)", value=True, key='chk_abf')
 anteroom_on = st.sidebar.checkbox("Anteroom (Ruang Perantara)", value=True, key='chk_ante')
 f1_on = st.sidebar.checkbox("Freezer 1", value=True, key='chk_f1')

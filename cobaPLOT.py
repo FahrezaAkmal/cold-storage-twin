@@ -10,7 +10,7 @@ st.title("⚡ Cold Storage Integrator Dashboard")
 st.write("Digital Twin Cold Storage Berdasarkan Database EnergyPlus & Batasan Termodinamika Komponen Bitzer")
 
 # ==================== KUMPULAN INPUT SIDEBAR ====================
-st.sidebar.header("📅 Pengaturan Waktu Operasional (Ala Traveloka)")
+st.sidebar.header("📅 Pengaturan Waktu Operasional")
 
 rentang_tanggal = st.sidebar.date_input(
     "Pilih Periode Penyimpanan",
@@ -160,7 +160,7 @@ if st.button("📊 Jalankan Skenario & Hitung Total Load"):
     st.success(f"Skenario Berhasil Dihitung dari {tgl_mulai} sampai {tgl_selesai} ({total_jam} Jam Operasional)!")
     
     # Tampilkan rekomendasi waktu beku hasil hitungan termodinamika riil
-    st.info(f"💡 **HASIL ANALISIS:** Berdasarkan kalkulasi properti ASHRAE, pembekuan {tonase} Ton ikan tuna dari suhu {t_in}°C menuju {t_out}°C membutuhkan waktu pembekuan intensif murni selama **{round(waktu_beku_riil_jam, 2)} Jam** menggunakan Bitzer HSN8571.")
+    st.info(f"💡 **HASIL ANALISIS:** Berdasarkan kalkulasi properti ASHRAE, pembekuan {tonase} Ton ikan tuna dari suhu {t_in}°C menuju {t_out}°C membutuhkan waktu pembekuan intensif murni selama **{round(waktu_beku_riil_jam, 2)} Jam**.")
     
     col1, col2, col3 = st.columns(3)
     col1.metric("Beban Puncak Ideal (Demand)", f"{round(df_skenario['Total_Load_Ideal_kW'].max(), 2)} kW")
